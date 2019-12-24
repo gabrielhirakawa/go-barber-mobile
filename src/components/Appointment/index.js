@@ -14,7 +14,7 @@ export default function Appointment({ data, onCancel }) {
         addSuffix: true,
       }),
     [data.date]
-  );
+  ); 
 
   return (
     <Container past={data.past}>
