@@ -2,7 +2,7 @@ module.exports = {
   env: {
     es6: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'prettier/react'],
+  extends: ['airbnb', 'prettier/react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -17,8 +17,8 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
+    'linebreak-style': ['error', 'windows'],
     'linebreak-style': 0,
-    'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
       'warn',
       {
