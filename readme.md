@@ -1,27 +1,25 @@
-gerar editor .config
-root = true
+# GoBarber Mobile
+Versão mobile do projeto GoBarber, desenvolvido em React Native. :iphone: :scissors:
 
-[*]
-end_of_line = lf
-indent_style = space
-indent_size = 2
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
+### Executar o Projeto
+Primeiro faça um clone desse repositório.(Necessário ter o projeto de backend rodando [GoBarber backend](https://github.com/gabrielhirakawa/go-barber-backend).)
+```
+git clone https://github.com/gabrielhirakawa/go-barber-mobile.git
+ou
+git clone git@github.com:gabrielhirakawa/go-barber-mobile.git
+```
 
-delete eslint original
+Dentro da pasta ***src/services*** encontre o arquivo ***api.js*** e altere o endereço de ip do backend para o ip da sua máquina.
+```
+const api = axios.create({
+  baseURL: 'http://192.168.15.21:3333',
+});
+```
 
-yarn add eslint -D
-yarn eslint --init
+Com emulador aberto ou smartphone conectado, dentro da pasta raíz rode o código abaixo. (Necessário ter Node e Npm instalado)
+```
+react-native run-android
+ou
+react-native run-ios
+```
 
-delete package-lock
-
-yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D 
-
-criar arquivo .prettierrc
-{
-"singleQuote": true,
-"trailingComma": "es5"
-}
-
-                  
