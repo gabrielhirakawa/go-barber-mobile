@@ -1,6 +1,4 @@
-import {
-  takeLatest, call, put, all, delay,
-} from 'redux-saga/effects';
+import { takeLatest, call, put, all, delay } from 'redux-saga/effects';
 import { Alert } from 'react-native';
 
 import api from '../../../services/api';
@@ -43,8 +41,6 @@ export function* signUp({ payload }) {
       email,
       password,
     });
-
-    //  history.push("/");
   } catch (e) {
     Alert.alert('Falha no cadastro', 'Verifique seus dados');
 
@@ -70,5 +66,4 @@ export default all([
   takeLatest('persist/REHYDRATE', setToken),
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
   takeLatest('@auth/SIGN_UP_REQUEST', signUp),
-  takeLatest('@auth/SIGN_OUT', signOut),
 ]);
